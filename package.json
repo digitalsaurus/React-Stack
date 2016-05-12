@@ -1,0 +1,28 @@
+{
+  "name": "React-Stack",
+  "version": "0.1.0",
+  "description": "React-Stack",
+  "main": "app.js",
+  "author": "Tom McKinney <tom@digitalsaurus.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {
+    "babel-core": "^5.8.9",
+    "babel-loader": "^5.3.2",
+    "browser-sync": "^2.8.0",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "react-hot-loader": "^1.2.8",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.4.0",
+    "redux": "^3.5.2",
+    "webpack": "^1.10.5",
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-hot-middleware": "^1.1.0"
+  },
+  "devDependencies": {
+    "redux-devtools": "^3.3.1"
+  }
+}
