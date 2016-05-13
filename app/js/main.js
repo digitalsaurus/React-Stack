@@ -20,7 +20,9 @@ ReactDOM.render(
             <IndexRoute component={Analytics} />
             <Route path='analytics' component={Analytics} />
             <Route path='profile' component={Profile} />
-            <Route path='creative' component={Creative} />
+            <Route path='creative' component={Creative}>
+              <Inbox />
+            </Route>
             <Route path='cases' component={Cases} />
             <Route path='clients' component={Clients} />
             <Route path='account' component={Account} />
