@@ -14,15 +14,22 @@ import Clients from './components/AgencyDashboard/Clients'
 import Account from './components/AgencyDashboard/Account'
 import Inbox from './components/AgencyDashboard/Inbox'
 
+// ReactDOM.render(
+//   <AgencyDashboard>
+//     <Creative name="test">
+//
+//     </Creative>
+//   </AgencyDashboard>,
+//     document.getElementById('app-root')
+// );
+//
 ReactDOM.render(
         <Router history={hashHistory}>
           <Route path='/' component={AgencyDashboard}>
             <IndexRoute component={Analytics} />
             <Route path='analytics' component={Analytics} />
             <Route path='profile' component={Profile} />
-            <Route path='creative' component={Creative}>
-              <Inbox />
-            </Route>
+            <Route path='creative' component={Creative} name="test" />
             <Route path='cases' component={Cases} />
             <Route path='clients' component={Clients} />
             <Route path='account' component={Account} />
