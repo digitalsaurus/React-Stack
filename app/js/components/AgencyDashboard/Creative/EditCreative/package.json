@@ -1,0 +1,6 @@
+{
+  "name": "EditCreative",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./EditCreative.jsx"
+}
