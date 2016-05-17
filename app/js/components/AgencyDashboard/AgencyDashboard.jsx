@@ -13,7 +13,6 @@ class AgencyDashboard extends Component {
       // })
     }
     render() {
-        console.log(this);
         return (
             <div className="dashboard-area">
 
