@@ -6,11 +6,11 @@ class AgencyDashboard extends Component {
         super(props);
     }
     componentDidMount() {
-      $.get('http://localhost:39836/umbraco/Api/ProfileRetrievalApi/FetchApiWrapper', { "id": 2986, "memberId": 4716 } function(response) {
-        console.log(response)
-      }).error(function(error) {
-        console.log(error)
-      })
+      // $.get('http://localhost:39836/umbraco/Api/ProfileRetrievalApi/FetchApiWrapper', { "id": 2986, "memberId": 4716 } function(response) {
+      //   console.log(response)
+      // }).error(function(error) {
+      //   console.log(error)
+      // })
     }
     render() {
         console.log(this);
