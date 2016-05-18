@@ -5,8 +5,28 @@ export default class EditCreative extends Component {
     e.preventDefault()
     this.props.onStatusChange({status: 'show'})
   }
+  coverImage(item) {
+    return typeof item.TempImage != 'undefined' && item.TempImage != null ? item.TempImage : item.RemoteImage != null ? item.RemoteImage : '/images/icons/blankImage.png'
+  }
+  mediaEdit(item) {
+    if (item.EmbeddableMedia != '' && (typeof item.TempFile == 'undefined' || item.TempFile == null)) {
+      return (
+        <div>
+          <input type="text" id="EmbeddableMedia" placeholder="Embeddable Media" data-field="EmbeddableMedia" disabled />
+          <a href="#change-media" class="change-media">Change media</a>
+        </div>
+      )
+    }
+    else {
+      return (
+        <div>
+          <input type="hidden" id="EmbeddableMedia" placeholder="Embeddable Media" value="" disabled />
+          <a href="#change-media" class="change-media">Change media</a>
+        </div>
+      )
+    }
+  }
   render() {
-    console.log(this);
     const item = this.props.item
     return (
       <li key={this.key} className='formView edit'>
@@ -14,20 +34,21 @@ export default class EditCreative extends Component {
           <div className="mediaWrap">
               <div className="input-wrap media">
                   <span className="cover-wrap">
-                      <img src={item.coverImage != null || item.coverImage != '' ? item.coverImage : '/images/profilecreationwizard/image_large.png'} width="250" height="150" className="coverImage" />
+                      <img src={this.coverImage(item)} width="250" height="150" className="coverImage" />
                   </span>
-                  <input type="hidden" id="EmbeddableMedia" placeholder="Embeddable Media" value="" disabled /><br/>
-                  <a href="#change-media" className="change-media">Change media</a>
-                </div>
+
+                  {this.mediaEdit(item)}
+
               </div>
+            </div>
 
             <div className="contentInfo">
               <div className="input-wrap">
-                <input type="text" id="Title" className="title" placeholder="Title" value={item.title} />
+                <input type="text" id="Title" className="title" placeholder="Title" value={item.Title} />
               </div>
 
               <div className="input-wrap">
-                <textarea />
+                <textarea value={item.ShortDescription} />
               </div>
 
               <div className="input-wrap select">
@@ -35,8 +56,7 @@ export default class EditCreative extends Component {
                       <span className="left"></span>
                       <span className="center">Client</span>
                       <a className="select-opener"></a>
-                      <select name="Client" placeholder="Client" className="target" id="Client"
-                              title="" aria-invalid="false" data-field="ClientId">
+                      <select name="Client" placeholder="Client" className="target" id="Client" aria-invalid="false">
                       </select>
                   </span>
               </div>

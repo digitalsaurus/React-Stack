@@ -11,6 +11,7 @@ class Navigation extends Component {
             <li id="creativeLink"><a href="/#/creative" className="nav-link">CREATIVE</a></li>
             <li id="casesLink"><a href="/#/cases" className="nav-link">CASES</a></li>
             <li id="clientsLink"><a href="/#/clients" className="nav-link">CLIENTS</a></li>
+            <li id="todoLink"><a href="/#/todo" className="nav-link">TODO</a></li>
 
               <li id="rightSection">
                   <div id="inboxLink" className="divider">
