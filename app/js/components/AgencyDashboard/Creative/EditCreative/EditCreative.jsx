@@ -30,7 +30,22 @@ export default class EditCreative extends Component {
                 <textarea />
               </div>
 
-              <div className="clear"></div>
+              <div className="input-wrap select">
+                  <span className="select-area">
+                      <span className="left"></span>
+                      <span className="center">Client</span>
+                      <a className="select-opener"></a>
+                      <select name="Client" placeholder="Client" className="target" id="Client"
+                              title="" aria-invalid="false" data-field="ClientId">
+                      </select>
+                  </span>
+              </div>
+
+              <select className="form-control">
+                <option>1</option>
+                <option>2</option>
+              </select>
+
             </div>
 
 
