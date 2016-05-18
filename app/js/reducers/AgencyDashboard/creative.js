@@ -1,4 +1,5 @@
-const creative = (state, action) => {
+const creative = (state = 'ADD_CREATIVE', action) => {
+  console.log(action)
   switch (action.type) {
     case 'ADD_CREATIVE':
       return {

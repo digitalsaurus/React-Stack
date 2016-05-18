@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import ContentList from '../ContentList'
 
+import AddCreative from '../../../Containers/AgencyDashboard/AddCreative.jsx'
+
 export default class Creative extends Component {
   constructor(props) {
     super(props)
@@ -54,7 +56,8 @@ export default class Creative extends Component {
           <div className="view-header">
             <h2>All Creative</h2>
             <em className="note">Add your creative below. Click on Featured to select the 5 pieces you’d like to include in your home page viewer.</em>
-            <a href="#add-person" className="addItem">Add +</a>
+            
+            <AddCreative />
           </div>
 
           <ContentList items={this.state.creatives} onSelect={this.selectContent.bind(this)} />
