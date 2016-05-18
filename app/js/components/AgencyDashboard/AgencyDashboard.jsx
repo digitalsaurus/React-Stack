@@ -17,7 +17,7 @@ class AgencyDashboard extends Component {
             <div className="dashboard-area">
 
                 <div id="dash-title">
-                    <span style={{float: 'left'}}>Agency Compile</span>
+                    <span style={{float: 'left'}}>React Demo</span>
 
                     <div className="btn-preview-holder"><a href="/agencies/agency-compile-demo/" target="_blank">VIEW PROFILE</a></div>
                     <div style={{clear: 'both'}}></div>

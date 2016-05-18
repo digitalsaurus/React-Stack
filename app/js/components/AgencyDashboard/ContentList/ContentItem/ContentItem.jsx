@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import ShowCreative from '../../Creative/ShowCreative'
 import EditCreative from '../../Creative/EditCreative'
+import FormatCreative from '../../Creative/FormatCreative'
 
 export default class ContentItem extends Component {
   constructor(props) {
@@ -15,10 +16,16 @@ export default class ContentItem extends Component {
   }
   render() {
     if (this.state.status == 'show') {
-      return <ShowCreative item={this.props.item} onStatusChange={this.changeStatus.bind(this)} />
+      return <ShowCreative key={this.key} item={this.props.item} onStatusChange={this.changeStatus.bind(this)} />
+    }
+    if (this.state.status == 'edit') {
+      return <EditCreative key={this.key} item={this.props.item} onStatusChange={this.changeStatus.bind(this)} />
+    }
+    if (this.state.status == 'format') {
+      return <FormatCreative key={this.key} item={this.props.item} onStatusChange={this.changeStatus.bind(this)} />
     }
     else {
-      return <EditCreative />
+      return <ShowCreative key={this.key} item={this.props.item} onStatusChange={this.changeStatus.bind(this)} />
     }
   }
 }

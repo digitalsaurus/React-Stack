@@ -7,8 +7,8 @@ export default class Creative extends Component {
     this.state = {
       selector: 0,
       creatives: [
-        { id: 1, title: 'First Creative', description: 'Short Description', clientId: 1, creativeType: 'Digital', coverImage: 'http://1fotonin.com/images/stock-photos/stock-photos-09.jpg' },
-        { id: 2, title: 'Sushi', description: 'Raw Fish', clientId: 2, creativeType: 'Food', coverImage: 'http://image.shutterstock.com/z/stock-vector-vector-sushi-cartoon-character-illustration-268839575.jpg' }
+        { id: 1, title: 'First Creative', description: 'Short Description', clientId: 1, creativeType: 'Digital', coverImage: '/images/stock/1.jpg' },
+        { id: 2, title: 'Sushi', description: 'Raw Fish', clientId: 2, creativeType: 'Food', coverImage: '/images/stock/2.jpg' }
       ]
     }
   }
