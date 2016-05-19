@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import EditControls from '../../../containers/EditControls.jsx'
+import EditControls from '../../../containers/EditContent.jsx'
 
 export default class EditCreative extends Component {
   show(e) {

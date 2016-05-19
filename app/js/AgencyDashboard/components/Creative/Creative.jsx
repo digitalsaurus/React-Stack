@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import ContentList from '../ContentList'
 
-import AddCreative from '../../containers/AddCreative.jsx'
-import CreativeList from '../../containers/CreativeList.jsx'
+import AddCreative from '../../containers/AddContent.jsx'
+import CreativeList from '../../containers/ListCreative.jsx'
 
 const Creative = () => (
 
@@ -18,10 +18,11 @@ const Creative = () => (
         <h2>All Creative</h2>
         <em className="note">Add your creative below. Click on Featured to select the 5 pieces you’d like to include in your home page viewer.</em>
 
-        <AddCreative />
+        <AddCreative type="creative" />
+
       </div>
 
-      <CreativeList />
+      <CreativeList type="creative" />
 
     </div>
   </div>
