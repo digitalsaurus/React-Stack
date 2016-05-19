@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 
 export default class Analytics extends Component {
   render() {
-      console.log(this);
     return (
       <div>
         <div id="line_div" className="module"></div>

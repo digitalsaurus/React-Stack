@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import ContentList from '../ContentList'
 
-import AddCreative from '../../../containers/AgencyDashboard/AddCreative.jsx'
-import CreativeList from '../../../containers/AgencyDashboard/CreativeList.jsx'
+import AddCreative from '../../containers/AddCreative.jsx'
+import CreativeList from '../../containers/CreativeList.jsx'
 
 const Creative = () => (
 
@@ -25,7 +25,7 @@ const Creative = () => (
 
     </div>
   </div>
-  
+
 )
 
 export default Creative

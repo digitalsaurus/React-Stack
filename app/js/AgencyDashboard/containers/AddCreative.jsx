@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addCreative } from '../../actions/AgencyDashboard'
+import { addCreative } from '../actions'
 
 let AddCreative = ({ dispatch }) => {
   return (

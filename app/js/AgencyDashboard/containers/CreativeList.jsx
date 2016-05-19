@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import { addCreative, deleteCreative } from '../../actions/AgencyDashboard'
-import ContentList from '../../components/AgencyDashboard/ContentList'
+import { addCreative, deleteCreative } from '../actions'
+import ContentList from '../components/ContentList'
 
 const mapStateToProps = (state) => {
   return {

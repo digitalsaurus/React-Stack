@@ -9,17 +9,21 @@ module.exports = {
   devtool: '#eval-source-map',
   context: path.join(__dirname, 'app', 'js'),
 
-  entry: [
-    'webpack/hot/dev-server',
-    'webpack-hot-middleware/client',
-    './main',
-    '../css/main.css'
-  ],
+  // entry: [
+  //   'webpack/hot/dev-server',
+  //   'webpack-hot-middleware/client',
+  //   './AgencyDashboard/main'
+  // ],
+
+  entry: {
+    agencyDashboard: ['webpack/hot/dev-server', 'webpack-hot-middleware/client', './AgencyDashboard/main'],
+    todo: ['webpack/hot/dev-server', 'webpack-hot-middleware/client', './Todo/main']
+  },
 
   output: {
-    path: path.join(__dirname, 'app', 'js'),
-    publicPath: '/js/',
-    filename: 'bundle.js'
+    path: path.join(__dirname, 'app', 'dist'),
+    publicPath: '/dist/',
+    filename: '[name].bundle.js'
   },
 
   plugins: [
