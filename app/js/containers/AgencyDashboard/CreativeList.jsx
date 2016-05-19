@@ -1,11 +1,24 @@
 import { connect } from 'react-redux'
-
-const getCreatives = (creatives) => {
-  return creatives
-}
+import { addCreative, deleteCreative } from '../../actions/AgencyDashboard'
+import ContentList from '../../components/AgencyDashboard/ContentList'
 
 const mapStateToProps = (state) => {
   return {
-    creatives: getCreatives(state.creatives)
+    items: state.creatives
   }
 }
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onAddCreativeClick: (Title) => {
+      dispatch(addCreative(Title))
+    },
+    onDeleteClick: (Id) => {
+      dispatch(deleteCreative(Id))
+    }
+  }
+}
+
+const CreativeList = connect(mapStateToProps, mapDispatchToProps)(ContentList)
+
+export default CreativeList

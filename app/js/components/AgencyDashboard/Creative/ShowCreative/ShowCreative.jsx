@@ -30,7 +30,7 @@ export default class ShowCreative extends Component {
           <div className="icon-wrap">
             <span className="cpw-list-icons">
                 <a className="list-icon edit editCreative" href="#" onClick={this.edit.bind(this)}></a>
-                <a className="list-icon delete deleteCreative" href="#" data-id=""></a>
+                <a className="list-icon delete deleteCreative" href="#" onClick={e => { e.preventDefault() this.props.onDeleteClick(item.Id) }></a>
             </span>
           </div>
 

@@ -20,7 +20,7 @@ export default class ContentList extends Component {
 
           {this.props.items.map(function(item) {
             return (
-              <ContentItem key={item.Id} item={item} />
+              <ContentItem key={item.Id} item={item} onDeleteClick={this.props.onDeleteClick} />
             )
           }.bind(this))}
 

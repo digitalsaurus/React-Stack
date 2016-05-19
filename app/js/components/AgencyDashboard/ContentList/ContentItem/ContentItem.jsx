@@ -16,7 +16,7 @@ export default class ContentItem extends Component {
   }
   render() {
     if (this.state.status == 'show') {
-      return <ShowCreative key={this.key} item={this.props.item} onStatusChange={this.changeStatus.bind(this)} />
+      return <ShowCreative key={this.key} item={this.props.item} onStatusChange={this.changeStatus.bind(this)} onDeleteClick={this.props.onDeleteClick} />
     }
     if (this.state.status == 'edit') {
       return <EditCreative key={this.key} item={this.props.item} onStatusChange={this.changeStatus.bind(this)} />

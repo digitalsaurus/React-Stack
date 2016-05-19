@@ -2,12 +2,12 @@ import { combineReducers } from 'redux'
 import todos from './Todo/todos'
 import visibilityFilter from './Todo/visibilityFilter'
 
-import creative from './AgencyDashboard/creative'
+import creatives from './AgencyDashboard/creatives'
 
 const appReducers = combineReducers({
     todos,
     visibilityFilter,
-    creative
+    creatives
 })
 
 export default appReducers

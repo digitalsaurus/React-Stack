@@ -1,8 +1,14 @@
-let creativeIndex = 2
-export const addCreative = (title) => {
+let creativeIndex = 1
+export const addCreative = () => {
   return {
     type: 'ADD_CREATIVE',
-    id: creativeIndex++,
-    title
+    Id: creativeIndex++
+  }
+}
+
+export const deleteCreative = (Id) => {
+  return {
+    type: 'DELETE_CREATIVE',
+    DeleteId: Id
   }
 }

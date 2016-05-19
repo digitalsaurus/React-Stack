@@ -6,7 +6,7 @@ let AddCreative = ({ dispatch }) => {
   return (
     <a href="#add-person" className="addItem" onClick={e => {
         e.preventDefault()
-        dispatch(addCreative('test'))
+        dispatch(addCreative())
       }}>
       Add +
     </a>
