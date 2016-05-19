@@ -5,27 +5,27 @@ import EditCreative from '../../Creative/EditCreative'
 import FormatCreative from '../../Creative/FormatCreative'
 
 export default class ContentItem extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      status: 'show'
-    }
-  }
+  // constructor(props) {
+  //   console.log(props)
+  //   this.state = {
+  //     status: 'show'
+  //   }
+  // }
   changeStatus(e) {
     this.setState(e)
   }
   render() {
-    if (this.state.status == 'show') {
-      return <ShowCreative key={this.key} item={this.props.item} onStatusChange={this.changeStatus.bind(this)} onDeleteClick={this.props.onDeleteClick} />
+    if (this.props.view == 'SHOW') {
+      return <ShowCreative key={this.key} {...this.props} onStatusChange={this.changeStatus.bind(this)} />
     }
-    if (this.state.status == 'edit') {
-      return <EditCreative key={this.key} item={this.props.item} onStatusChange={this.changeStatus.bind(this)} />
+    if (this.props.view == 'EDIT') {
+      return <EditCreative key={this.key} {...this.props} onStatusChange={this.changeStatus.bind(this)} />
     }
-    if (this.state.status == 'format') {
-      return <FormatCreative key={this.key} item={this.props.item} onStatusChange={this.changeStatus.bind(this)} />
+    if (this.props.view == 'FORMAT') {
+      return <FormatCreative key={this.key} {...this.props} onStatusChange={this.changeStatus.bind(this)} />
     }
     else {
-      return <ShowCreative key={this.key} item={this.props.item} onStatusChange={this.changeStatus.bind(this)} />
+      return <ShowCreative key={this.key} {...this.props} onStatusChange={this.changeStatus.bind(this)} />
     }
   }
 }

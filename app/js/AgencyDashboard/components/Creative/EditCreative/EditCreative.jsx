@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import EditControls from '../../../containers/EditControls.jsx'
 
 export default class EditCreative extends Component {
   show(e) {
@@ -27,7 +28,7 @@ export default class EditCreative extends Component {
     }
   }
   render() {
-    const item = this.props.item
+    const item = this.props
     return (
       <li key={this.key} className='formView edit'>
         <div className="content-wrap">
@@ -68,11 +69,8 @@ export default class EditCreative extends Component {
 
             </div>
 
+              <EditControls Id={item.Id} />
 
-              <div className="cornerButtons">
-                  <button type="submit" className="btn-default">Save</button>
-                  <a className="btn-default cancel" onClick={this.show.bind(this)}>Cancel</a>
-              </div>
             </div>
           </li>
       // <li>

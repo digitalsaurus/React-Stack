@@ -1,45 +1,5 @@
 import React, { Component } from 'react'
 
-// const item = this.props.item
-//
-// const ShowCreative = () => (
-//   <li key={this.key} className='formView'>
-//     <div className="content-wrap">
-//
-//       <div className="img-wrap">
-//         <img src={this.coverImage(item)} className="coverImage loading" />
-//
-//       </div>
-//
-//       <div className="contentInfo">
-//           <p className="title">{item.Title}</p>
-//
-//           <p className="clientName">{item.ClientId}</p>
-//
-//           <p className="tags">{item.CreativeType}</p>
-//       </div>
-//
-//       <div className="icon-wrap">
-//         <span className="cpw-list-icons">
-//             <a className="list-icon edit editCreative" href="#" onClick={e => {
-//               e.preventDefault()
-//               this.props.onStatusChange({status: 'edit'})
-//               }}></a>
-//             <a className="list-icon delete deleteCreative" href="#"
-//               onClick={e => {
-//                 e.preventDefault()
-//                 this.props.onDeleteClick(item.Id)
-//               }}></a>
-//         </span>
-//       </div>
-//
-//       <span className="contentDate"></span>
-//     </div>
-//   </li>
-// )
-//
-// export default ShowCreative
-
 export default class ShowCreative extends Component {
   edit(e) {
     e.preventDefault()
@@ -49,7 +9,7 @@ export default class ShowCreative extends Component {
     return typeof item.TempImage != 'undefined' && item.TempImage != null ? item.TempImage : item.RemoteImage != null ? item.RemoteImage : '/images/icons/blankImage.png'
   }
   render() {
-    const item = this.props.item;
+    const item = this.props
     return (
       <li key={this.key} className='formView'>
         <div className="content-wrap">
@@ -69,7 +29,10 @@ export default class ShowCreative extends Component {
 
           <div className="icon-wrap">
             <span className="cpw-list-icons">
-                <a className="list-icon edit editCreative" href="#" onClick={this.edit.bind(this)}></a>
+                <a className="list-icon edit editCreative" href="#" onClick={e => {
+                    e.preventDefault()
+                    this.props.onEditClick(item.Id)
+                  }}></a>
                 <a className="list-icon delete deleteCreative" href="#"
                   onClick={e => {
                     e.preventDefault()

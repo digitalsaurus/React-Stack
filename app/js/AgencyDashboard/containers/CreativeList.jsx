@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { addCreative, deleteCreative } from '../actions'
+import { addCreative, editItem, deleteCreative } from '../actions'
 import ContentList from '../components/ContentList'
 
 const mapStateToProps = (state) => {
@@ -12,6 +12,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onAddCreativeClick: (Title) => {
       dispatch(addCreative(Title))
+    },
+    onEditClick: (Id) => {
+      dispatch(editItem(Id))
     },
     onDeleteClick: (Id) => {
       dispatch(deleteCreative(Id))
