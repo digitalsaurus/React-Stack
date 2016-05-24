@@ -7,7 +7,7 @@ import EditCreative from '../Creative/EditCreative'
 
 export default class ContentList extends Component {
   render() {
-    const { items, ...other } = this.props;
+    const { items, ...other } = this.props
     return (
       <div className='listingsRegion content-list'>
         <ul>

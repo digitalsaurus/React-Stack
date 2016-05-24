@@ -3,6 +3,7 @@ import ContentList from '../ContentList'
 
 import AddCreative from '../../containers/AddContent.jsx'
 import CreativeList from '../../containers/ListCreative.jsx'
+import DynamicList from '../../containers/DynamicList.jsx'
 
 const Creative = () => (
 
@@ -22,7 +23,7 @@ const Creative = () => (
 
       </div>
 
-      <CreativeList type="creative" />
+      <DynamicList type="creative" />
 
     </div>
   </div>

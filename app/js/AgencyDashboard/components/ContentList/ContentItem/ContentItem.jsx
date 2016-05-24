@@ -15,6 +15,7 @@ export default class ContentItem extends Component {
     this.setState(e)
   }
   render() {
+    console.log(this)
     if (this.props.view == 'SHOW') {
       return <ShowCreative key={this.key} {...this.props} onStatusChange={this.changeStatus.bind(this)} />
     }
